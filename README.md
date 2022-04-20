@@ -3,6 +3,8 @@
 ## Prérequis :
 **Vous devez avoir [Node](https://nodejs.org/en/download/), [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) et [Angular CLI](https://angular.io/guide/setup-local) installés sur votre poste.**
 
+**Le back-end de ce projet est dans le repository back-projet-edacy**
+
 ## le procédure d'installation
 
 1. **Cloner le projet**
