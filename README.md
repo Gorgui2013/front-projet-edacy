@@ -21,6 +21,10 @@
 
 `ng serve`
 
-5. **Une foi l'application démarée, cliquer sur le button charger le flux pour recupérer le flux RSS**
+5. **Accéder à l'application via un navigateur sur le lien suivant**
+
+`http://localhost:4200`
+
+6. **Une foi l'application démarée, cliquer sur le button charger le flux pour recupérer le flux RSS**
 
 ![](cahargeflux.JPG)
