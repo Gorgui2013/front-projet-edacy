@@ -1,27 +1,26 @@
-# FrontProjet
+# Manuelle d'installation de l'application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+## Prérequis :
+**Vous devez avoir [Node](https://nodejs.org/en/download/), [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) et [Angular CLI](https://angular.io/guide/setup-local) installés sur votre poste.**
 
-## Development server
+## le procédure d'installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. **Cloner le projet**
 
-## Code scaffolding
+`git clone https://github.com/Gorgui2013/back-projet-edacy.git`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. **Déplacer dans le projet**
 
-## Build
+`cd front-projet-edacy`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Installer les dépendances**
 
-## Running unit tests
+`npm install`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. **Démarer l'application**
 
-## Running end-to-end tests
+`ng serve`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+5. **Une foi l'application démarée, cliquer sur le button charger le flux pour recupérer le flux RSS**
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![](cahargeflux.JPG)
