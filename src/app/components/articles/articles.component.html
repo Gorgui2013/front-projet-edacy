@@ -1,0 +1,23 @@
+<section class="mx-auto container px-6">
+  <h1 class="font-bold text-lg">Liste Articles</h1>
+  <!-- list articles -->
+  <div class="grid p-2 grid-cols-1 gap-4 md:grid-cols-3">
+    <!-- single article -->
+    <div class="flex flex-row hover:shadow-lg rounded md:flex-col" *ngFor="let article of articles | paginate: { itemsPerPage: 12, currentPage: p }" style="cursor: pointer" (click)="onViewArticle(article)">
+      <img src="{{article.media.url}}" alt="{{article.media.credit}} - {{article.media.description}}" class="w-28 md:w-auto">
+      <div class="flex flex-col p-2 space-y-2">
+        <p class="font-bold text-lg text-grayFirst hover:text-yellow">{{article.title}}</p>
+        <p class="italic text-black"><i class="fas fa-calendar"></i> {{article.pubDate | date:'dd/MM/Y'}}</p>
+        <!-- <button class="rounded bg-yellow p-2 hover:bg-grayFirst hover:text-graySecond hover:shadow-md md:w-12">Lire plus ...</button> -->
+      </div>
+    </div>
+    <!-- single article -->
+  </div>
+  <!-- Pagination -->
+  <pagination-controls (pageChange)="p = $event"
+  previousLabel=""
+  nextLabel=""
+  class="my-pagination">
+</pagination-controls>
+<!-- list articles -->
+</section>

@@ -1,13 +1,38 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>FrontProjet</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
-</html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mini Projet Edacy</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screen: {
+            sm: '480px',
+            md: '768px',
+            lg: '976px',
+            xl: '1440px'
+          },
+          extend: {
+            colors: {
+              yellow: 'hsl(50, 100%, 50%)',
+              grayFirst: 'hsl(50, 98%, 9%)',
+              graySecond: 'hsl(50, 16%, 75%)',
+              white: 'hsl(144, 0%, 100%)',
+              black: 'hsl(144, 100%, 0%)'
+            }
+          },
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <app-root></app-root>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  </body>
+  </html>

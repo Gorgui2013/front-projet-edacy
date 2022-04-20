@@ -1,0 +1,49 @@
+<section class="mx-auto container px-6 mb-24">
+
+  <!-- Détails article -->
+  <div class="flex flex-row space-x-4">
+    <div class="flex flex-col space-y-4 md:w-3/4 p-4" *ngIf="!editMode">
+      <div class="bg-{{notifier.type}}-200 border-{{notifier.type}}-500 p-2 rounded" *ngIf="alertNotifier">
+        <i class="fas fa-info"></i> {{notifier.message}}
+      </div>
+      <div class="flex flex-col">
+        <h1 class="font-bold text-lg">{{article.title}}</h1>
+        <a href="{{article.link}}" class="text-sm"><i class="fas fa-calendar text-grayFirst"></i> {{article.pubDate | date:'dd/MM/Y'}} | le monde</a>
+      </div>
+      <img src="{{article.media.url}}" alt="{{article.media.credit}} - {{article.media.description}}" class="rounded">
+      <p>{{article.description}}</p>
+    </div>
+
+    <!-- formulaire d'édition -->
+    <div class="w-3/4 shadow-md rounded p-4" *ngIf="editMode">
+      <h1 class="font-bold text-lg text-center">Modification</h1>
+      <div class="p-8">
+        <form [formGroup]="articleForm" (ngSubmit)="saveArticle()">
+          <div class="space-y-4">
+            <div class="flex flex-col space-y-2">
+              <label for="title" class="font-bold">Titre</label>
+              <input type="text" id="title" formControlName="title" [(ngModel)]="article.title" class="p-1 border-neutral-300 border-2 rounded focus:border-yellow-300 focus:shadow hover:border-neutral-400">
+            </div>
+            <div class="flex flex-col space-y-2">
+              <label for="description" class="font-bold">Description</label>
+              <textarea rows="3" id="description" formControlName="description" [(ngModel)]="article.description" class="p-1 border-neutral-300 border-2 rounded focus:border-yellow-300 focus:shadow hover:border-neutral-400"></textarea>
+              <!-- <input type="text" > -->
+            </div>
+            <div class="flex justify-end">
+              <button type="submit" class="text-sm bg-yellow rounded hover:bg-grayFirst hover:text-graySecond py-2 px-6 text-center" [disabled]="articleForm.invalid"><i class="fas fa-save"></i> Enregistrer</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- options -->
+    <div class="flex flex-col shadow-md rounded space-y-4 p-4 md:w-1/4">
+      <a href="{{article.link}}" target="_blank" class="text-sm bg-yellow rounded hover:bg-grayFirst hover:text-graySecond py-2 text-center"><i class="fas fa-globe"></i> le monde</a>
+      <button (click)="editArticle()" class="text-sm bg-yellow rounded hover:bg-grayFirst hover:text-graySecond py-2 text-center" *ngIf="!editMode"><i class="fas fa-edit"></i> modifier</button>
+      <button (click)="editArticle()" class="text-sm bg-yellow rounded hover:bg-grayFirst hover:text-graySecond py-2 text-center" *ngIf="editMode"><i class="fas fa-edit"></i> Annuler</button>
+      <button (click)="back()" class="text-sm bg-yellow rounded hover:bg-grayFirst hover:text-graySecond py-2 text-center"><i class="fas fa-chevron-left"></i> Retour</button>
+    </div>
+  </div>
+
+</section>
