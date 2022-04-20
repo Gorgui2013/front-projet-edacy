@@ -12,6 +12,11 @@ export class ArticleService {
 
   constructor(private api: ApiService) {}
 
+  // recupération duflux rss
+  getFlux() {
+    return this.api.obtenir('init');
+  }
+
   // recupération de la liste des articles
   getArticles() {
     return this.api.obtenir('articles');

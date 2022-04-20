@@ -23,7 +23,6 @@ export class ApiService {
   obtenir(endpoint: string) {
     return this._http.get(this.apiUrl + endpoint)
     .pipe(
-      retry(3),
       catchError(this.handleError)
       );
   }

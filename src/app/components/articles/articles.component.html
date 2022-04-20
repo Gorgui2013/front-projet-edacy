@@ -1,5 +1,12 @@
 <section class="mx-auto container px-6">
-  <h1 class="font-bold text-lg">Liste Articles</h1>
+  <div class="flex flex-row justify-between">
+    <h1 class="font-bold text-lg">Liste Articles</h1>
+    <button (click)="chargerFlux()" class="text-sm bg-yellow rounded hover:bg-grayFirst hover:text-graySecond py-2 px-6 text-center" *ngIf="nb === 0">Charger le flux</button>
+  </div>
+
+  <div class="bg-{{notifier.type}}-200 border-{{notifier.type}}-500 p-2 rounded" *ngIf="alertNotifier">
+    <i class="fas fa-info"></i> {{notifier.message}}
+  </div>
   <!-- list articles -->
   <div class="grid p-2 grid-cols-1 gap-4 md:grid-cols-3">
     <!-- single article -->
@@ -17,7 +24,7 @@
   <pagination-controls (pageChange)="p = $event"
   previousLabel=""
   nextLabel=""
-  class="my-pagination">
+  class="my-pagination" *ngIf="nb != 0">
 </pagination-controls>
 <!-- list articles -->
 </section>
