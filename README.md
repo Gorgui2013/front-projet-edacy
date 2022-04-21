@@ -5,7 +5,7 @@
 
 **Le back-end de ce projet est dans le repository back-projet-edacy**
 
-## le procédure d'installation
+## Procédure d'installation
 
 1. **Cloner le projet**
 
